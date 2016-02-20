@@ -11,6 +11,19 @@
   },
   "permissions": [
     "activeTab",
-    "https://ajax.googleapis.com/"
-  ]
+    "tabs", "http://www.google.com/*","https://www.quora.com/*"
+     ],
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "css":["mystyle.css"],
+      "js": ["myscript.js"]
+      
+    }
+  ],
+   "chrome_url_overrides": {
+    "newtab": "popup.html"
+      
+    
+  }
 }
