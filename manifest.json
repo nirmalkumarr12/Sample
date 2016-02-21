@@ -11,15 +11,20 @@
   },
   "permissions": [
     "activeTab",
-    "tabs", "http://www.google.com/*","https://www.quora.com/*"
+    "tabs"
      ],
   "content_scripts": [
     {
-      "matches": ["https://*/*"],
+      "matches": ["https://*/*","http://*/*"],
       "css":["mystyle.css"],
-      "js": ["myscript.js"]
+      "js": ["jQuery.js","myscript.js"]
       
     }
+  ],
+  "web_accessible_resources":[
+      "toolbar.html","mystyle.css","jQuery.js"
+
+
   ],
    "chrome_url_overrides": {
     "newtab": "popup.html"

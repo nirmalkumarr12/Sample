@@ -1,10 +1,8 @@
-var elems = document.getElementsByTagName("a");
 
-document.body.style.backgroundColor = "green";
 
- for (var i = 0; i<elems.length; i++) {
+//document.body.style.backgroundColor = "green";
+var url= chrome.extension.getURL('toolbar.html');
+var height='35px'
+ var frm="<iframe src='"+url+"' id='ToolSample' style' style='height:"+height+"'></iframe>";
 
- 	elems[i].style.color = 'red';
- 	elems[i].style.backgroundColor = 'pink';
-
- }
+ $('html').append(frm);
